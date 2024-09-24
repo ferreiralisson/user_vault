@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface UserCreateService {
 
-    List<UserCreate> findAll();
+    List<UserCreateResponseDTO> findAll();
 
     UserCreateResponseDTO create(UserCreateRequestDTO userCreateRequestDTO);
 }

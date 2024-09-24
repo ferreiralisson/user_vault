@@ -5,6 +5,8 @@ public class AddressDTO {
     private String cep;
     private String address_name;
     private String district;
+    private String city;
+    private String state;
 
     public AddressDTO() {
     }
@@ -31,5 +33,21 @@ public class AddressDTO {
 
     public void setDistrict(String district) {
         this.district = district;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

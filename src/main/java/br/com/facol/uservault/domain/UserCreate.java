@@ -2,6 +2,9 @@ package br.com.facol.uservault.domain;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(schema = "vault", name = "user_create")
 public class UserCreate {
@@ -12,11 +15,15 @@ public class UserCreate {
     private String name;
     private String email;
 
+    @OneToMany(mappedBy = "userCreate", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Address> addresses;
+
     public UserCreate() {}
 
-    public UserCreate(String name, String email) {
+    public UserCreate(String name, String email, List<Address> addresses) {
         this.name = name;
         this.email = email;
+        this.addresses = addresses;
     }
 
     public Long getId() {
@@ -41,5 +48,13 @@ public class UserCreate {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Address> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(List<Address> addresses) {
+        this.addresses = addresses;
     }
 }

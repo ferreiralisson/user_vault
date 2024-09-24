@@ -1,10 +1,13 @@
 package br.com.facol.uservault.dto;
 
+import java.util.List;
+
 public class UserCreateResponseDTO {
 
     private String id;
     private String name;
     private String email;
+    private List<AddressDTO> address;
 
     public UserCreateResponseDTO() {
     }
@@ -31,5 +34,13 @@ public class UserCreateResponseDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<AddressDTO> getAddress() {
+        return  address;
+    }
+
+    public void setAddress(List<AddressDTO> address) {
+        this.address = address;
     }
 }
