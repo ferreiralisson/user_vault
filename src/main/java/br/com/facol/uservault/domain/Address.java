@@ -3,7 +3,7 @@ package br.com.facol.uservault.domain;
 import jakarta.persistence.*;
 
 @Entity
-@Table(schema = "vault", name = "address")
+@Table(name = "address")
 public class Address {
 
     @Id

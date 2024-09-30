@@ -1,4 +1,4 @@
-CREATE TABLE vault.address
+CREATE TABLE address
 (
     id serial NOT NULL,
     cep character varying,
@@ -9,6 +9,3 @@ CREATE TABLE vault.address
     user_create_id serial,
     PRIMARY KEY (id)
 );
-
-ALTER TABLE IF EXISTS vault.address
-    OWNER to coresmarttime;
