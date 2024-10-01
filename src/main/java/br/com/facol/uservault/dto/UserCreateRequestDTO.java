@@ -3,6 +3,7 @@ package br.com.facol.uservault.dto;
 public class UserCreateRequestDTO {
     private String name;
     private String email;
+    private String password;
     private String cep;
 
     public UserCreateRequestDTO() {
@@ -30,5 +31,13 @@ public class UserCreateRequestDTO {
 
     public void setCep(String cep) {
         this.cep = cep;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

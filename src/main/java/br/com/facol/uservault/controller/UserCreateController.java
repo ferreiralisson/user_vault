@@ -1,6 +1,5 @@
 package br.com.facol.uservault.controller;
 
-import br.com.facol.uservault.domain.UserCreate;
 import br.com.facol.uservault.dto.UserCreateRequestDTO;
 import br.com.facol.uservault.dto.UserCreateResponseDTO;
 import br.com.facol.uservault.service.UserCreateService;
