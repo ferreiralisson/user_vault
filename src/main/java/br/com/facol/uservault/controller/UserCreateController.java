@@ -13,8 +13,6 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserCreateController {
 
-    // TODO: implementar: Builder, Adapter e Command
-
     private final UserCreateService service;
 
     public UserCreateController(UserCreateService service) {

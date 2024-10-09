@@ -17,6 +17,7 @@ public class UserCreateToUserCreateResponseDTO implements Mapper<UserCreate, Use
         userCreateResponseDTO.setId(userCreate.getId().toString());
         userCreateResponseDTO.setName(userCreate.getName());
         userCreateResponseDTO.setEmail(userCreate.getEmail());
+        userCreateResponseDTO.setProfile(userCreate.getProfile().toString());
         userCreateResponseDTO.setAddress(getAdresses(userCreate.getAddresses()));
         return userCreateResponseDTO;
     }

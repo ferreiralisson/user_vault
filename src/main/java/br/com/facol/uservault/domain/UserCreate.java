@@ -13,17 +13,20 @@ public class UserCreate {
     private String name;
     private String email;
     private String password;
+    @Enumerated(EnumType.STRING)
+    private UserProfile profile;
 
     @OneToMany(mappedBy = "userCreate", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> addresses;
 
     public UserCreate() {}
 
-    public UserCreate(String name, String email, List<Address> addresses, String password) {
+    public UserCreate(String name, String email, List<Address> addresses, String password, UserProfile profile) {
         this.name = name;
         this.email = email;
         this.addresses = addresses;
         this.password = password;
+        this.profile = profile;
     }
 
     public Long getId() {
@@ -64,5 +67,13 @@ public class UserCreate {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public UserProfile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(UserProfile profile) {
+        this.profile = profile;
     }
 }

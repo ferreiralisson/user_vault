@@ -7,6 +7,7 @@ public class UserCreateResponseDTO {
     private String id;
     private String name;
     private String email;
+    private String profile;
     private List<AddressDTO> address;
 
     public UserCreateResponseDTO() {
@@ -38,6 +39,14 @@ public class UserCreateResponseDTO {
 
     public List<AddressDTO> getAddress() {
         return  address;
+    }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 
     public void setAddress(List<AddressDTO> address) {
