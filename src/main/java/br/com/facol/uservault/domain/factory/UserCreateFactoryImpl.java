@@ -6,7 +6,6 @@ import br.com.facol.uservault.domain.UserProfile;
 import br.com.facol.uservault.dto.AddressDTO;
 import br.com.facol.uservault.dto.UserCreateRequestDTO;
 import br.com.facol.uservault.service.AddressService;
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
